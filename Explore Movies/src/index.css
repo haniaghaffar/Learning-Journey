@@ -434,3 +434,115 @@ EMPTY STAR
 </svg>
 
 */
+/* ============================= */
+/* RESPONSIVENESS STARTS HERE    */
+/* ============================= */
+
+/* Big tablets & small laptops (≤ 1200px) */
+@media screen and (max-width: 1200px) {
+  .main {
+    gap: 2rem;
+  }
+  .box {
+    width: 45rem;
+    max-width: 100%;
+  }
+}
+
+/* Tablets (≤ 992px) */
+@media screen and (max-width: 992px) {
+  .main {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.6rem;
+    height: auto;
+  }
+
+  .box {
+    width: 48%;
+    max-width: 100%;
+  }
+
+  .search {
+    width: 70%;
+    font-size: 1.6rem;
+  }
+}
+
+/* Mobiles (≤ 768px) */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 56%; /* overall font thoda chhota */
+  }
+
+  body {
+    padding: 1.6rem;
+  }
+
+  .nav-bar {
+    grid-template-columns: 1fr;
+    height: auto;
+    padding: 1.6rem;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .search {
+    width: 100%;
+    font-size: 1.6rem;
+  }
+
+  .num-results {
+    justify-self: center;
+    font-size: 1.6rem;
+  }
+
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 100%;
+  }
+
+  .details header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .details img {
+    width: 80%;
+  }
+}
+
+/* Small Phones (≤ 480px) */
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 50%; /* sab chhota aur tight */
+  }
+
+  .nav-bar {
+    padding: 1rem;
+  }
+
+  .search {
+    padding: 0.8rem 1.2rem;
+    font-size: 1.4rem;
+  }
+
+  .summary div {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .details img {
+    width: 100%;
+  }
+}
