@@ -1,0 +1,165 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* App Container */
+.app {
+  background: linear-gradient(135deg, #fef6ff, #e0f7fa, #fffde7);
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo */
+h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+/* Form */
+.add-form {
+  background: #ffffffcc;
+  padding: 1rem 1.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  border: 2px solid #ffe0f7;
+}
+
+.add-form h3 {
+  font-size: 1rem;
+  color: #7b1fa2;
+  margin-right: 1rem;
+}
+
+.add-form select,
+.add-form input {
+  padding: 0.5rem 0.8rem;
+  border: 2px solid #f8bbd0;
+  border-radius: 0.6rem;
+  outline: none;
+  font-size: 0.9rem;
+  background: #fff5fb;
+}
+
+.add-form button {
+  padding: 0.6rem 1rem;
+  background: linear-gradient(90deg, #f48fb1, #ce93d8, #90caf9);
+  color: #fff;
+  border: none;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-form button:hover {
+  opacity: 0.85;
+}
+
+/* Packing List */
+.list {
+  width: 100%;
+  max-width: 600px;
+  background: #ffffffee;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  border: 2px solid #e1bee7;
+}
+
+.list ul {
+  list-style: none;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px dashed #f8bbd0;
+}
+
+.list li:last-child {
+  border-bottom: none;
+}
+
+.list li span {
+  flex: 1;
+  margin-left: 0.8rem;
+  font-size: 0.95rem;
+  color: #6a1b9a;
+}
+
+.list li button {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #f06292;
+  transition: 0.2s;
+}
+
+.list li button:hover {
+  transform: scale(1.2);
+  color: #d81b60;
+}
+
+/* Actions */
+.actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.actions select {
+  padding: 0.5rem 0.8rem;
+  border: 2px solid #ba68c8;
+  border-radius: 0.6rem;
+  font-size: 0.9rem;
+  outline: none;
+  background: #f3e5f5;
+}
+
+.actions button {
+  padding: 0.5rem 0.9rem;
+  background: linear-gradient(90deg, #ffb74d, #ff8a65, #f06292);
+  color: #fff;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.actions button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* Stats */
+.stats {
+  margin-top: auto;
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #e1bee7, #f8bbd0, #ffe0b2);
+  border-radius: 1rem;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.08);
+  color: #4a148c;
+  text-align: center;
+  max-width: 600px;
+  font-weight: 500;
+}
