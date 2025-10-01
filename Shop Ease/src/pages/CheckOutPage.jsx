@@ -1,10 +1,10 @@
-import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
-import { useMutation } from "@tanstack/react-query";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { addOrder } from "../redux/slices/ordersSlice";
-import { clearCart } from "../redux/slices/cartSlice";
+import { useMutation } from "@tanstack/react-query";
 import { getAddress } from "../services/productsApi";
+import { clearCart } from "../redux/slices/cartSlice";
+import { addOrder } from "../redux/slices/ordersSlice";
 
 export default function CheckOutPage() {
   const dispatch = useDispatch();
@@ -13,24 +13,15 @@ export default function CheckOutPage() {
   const items = useSelector((state) => state.cart.items) || [];
   const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
-  const [user, setUser] = useState({
-    name: "",
-    email: "",
-    address: "",
-    phone: "",
-  });
-
+  const [user, setUser] = useState({ name: "", email: "", address: "", phone: "" });
   const [submitted, setSubmitted] = useState(false);
-
   const [paymentMethod, setPaymentMethod] = useState("Cash on Delivery");
   const [position, setPosition] = useState("");
 
-  // 🧠 Handle input change
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 
-  // 📍 Auto-fill location
   const { mutate: fetchAddress, isPending } = useMutation({
     mutationFn: getAddress,
     onSuccess: (data) => {
@@ -47,20 +38,16 @@ export default function CheckOutPage() {
   });
 
   const handleGetLocation = () => {
-    if (!navigator.geolocation) return console.log("Geolocation not supported");
+    if (!navigator.geolocation) return;
     navigator.geolocation.getCurrentPosition(
       ({ coords }) =>
-        fetchAddress({
-          latitude: coords.latitude,
-          longitude: coords.longitude,
-        }),
+        fetchAddress({ latitude: coords.latitude, longitude: coords.longitude }),
       (error) => console.log(error)
     );
   };
 
   const handleConfirmPurchase = () => {
     setSubmitted(true);
-
     const isValid = Object.values(user).every((v) => v.trim() !== "");
     if (!isValid) return;
 

@@ -23,7 +23,7 @@ export default function App() {
       children: [
         { index: true, element: <Home /> },
         { path: "cart", element: <CartPage /> },
-        { path: "checkout", element: <CheckOutPage /> },
+        { path: "checkout", element: < CheckOutPage/> },
         { path: "orders", element: <OrdersPage /> },
         { path: "product/:id", element: <ProductDetail /> },
       ],
