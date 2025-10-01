@@ -4,7 +4,7 @@ import CartPage from "./pages/CartPage";
 import OrdersPage from "./pages/OrdersPage";
 import ProductDetail from "./components/ProductDetail";
 import Navbar from "./components/Navbar";
-import CheckOutPage from "./pages/checkOutPage";
+import Checkout from "./pages/checkout";
 
 function AppLayout() {
   return (
@@ -23,7 +23,7 @@ export default function App() {
       children: [
         { index: true, element: <Home /> },
         { path: "cart", element: <CartPage /> },
-        { path: "checkout", element: < CheckOutPage/> },
+        { path: "checkout", element: < Checkout/> },
         { path: "orders", element: <OrdersPage /> },
         { path: "product/:id", element: <ProductDetail /> },
       ],

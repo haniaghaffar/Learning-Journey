@@ -6,7 +6,7 @@ import { getAddress } from "../services/productsApi";
 import { clearCart } from "../redux/slices/cartSlice";
 import { addOrder } from "../redux/slices/ordersSlice";
 
-export default function CheckOutPage() {
+export default function Checkout() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
